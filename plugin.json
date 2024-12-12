@@ -1,10 +1,10 @@
 {
-    "name": "My plugin",
+    "name": "Cv Builder",
     "version": "0.0.1",
-    "description": "Description of my_plugin.",
+    "description": "Description of cv_builder.",
     "author_name": "Me",
     "author_url": "https://mywebsite.me",
-    "plugin_url": "https://github.com/my_name/my_plugin",
+    "plugin_url": "https://github.com/my_name/cv_builder",
     "tags": "cat, template, example",
-    "thumb": "https://raw.githubusercontent.com/my_repo_path/my_plugin.png"
+    "thumb": "https://raw.githubusercontent.com/my_repo_path/cv_builder.png"
 }

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ full_name }}'s CV</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.5;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .header h1 {
+            font-size: 24px;
+            margin: 0;
+        }
+        .header p {
+            margin: 5px 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table td, table th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        table th {
+            background-color: #f4f4f4;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>{{ full_name }}</h1>
+        <p>Email: {{ email }}</p>
+        {% if phone_number %}
+        <p>Phone: {{ phone_number }}</p>
+        {% endif %}
+    </div>
+
+    <h2>Summary</h2>
+    <p>{{ summary }}</p>
+
+    <h2>Skills</h2>
+    <ul>
+        {% for skill in skills %}
+        <li>{{ skill }}</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Experience</h2>
+    <table>
+        <tr>
+            <th>Job Title</th>
+            <th>Company</th>
+            <th>Duration</th>
+            <th>Description</th>
+        </tr>
+        {% for job in experience %}
+        <tr>
+            <td>{{ job.job_title }}</td>
+            <td>{{ job.company_name }}</td>
+            <td>{{ job.start_date }} - {{ job.end_date }}</td>
+            <td>{{ job.description }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
